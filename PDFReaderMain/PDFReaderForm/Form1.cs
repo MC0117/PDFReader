@@ -24,9 +24,6 @@ namespace PDFReaderForm
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(Directory.GetCurrentDirectory());
-            MessageBox.Show(Directory.GetDirectoryRoot(Directory.GetCurrentDirectory()));
-
         }
 
         private PdfDocument CreatePDFDocument(string fileName)
