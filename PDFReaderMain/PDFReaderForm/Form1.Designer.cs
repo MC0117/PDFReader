@@ -39,6 +39,11 @@
             this.lblFilePath = new System.Windows.Forms.Label();
             this.lblNewFileName = new System.Windows.Forms.Label();
             this.txtSplitFileName = new System.Windows.Forms.TextBox();
+            this.sfdSaveDialog = new System.Windows.Forms.SaveFileDialog();
+            this.fbdBrowsingDialog = new System.Windows.Forms.FolderBrowserDialog();
+            this.txtNewFilePath = new System.Windows.Forms.TextBox();
+            this.btnBrowse = new System.Windows.Forms.Button();
+            this.lblNewFilePath = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudStartPage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudEndPage)).BeginInit();
             this.SuspendLayout();
@@ -66,14 +71,14 @@
             // 
             // nudStartPage
             // 
-            this.nudStartPage.Location = new System.Drawing.Point(15, 146);
+            this.nudStartPage.Location = new System.Drawing.Point(15, 224);
             this.nudStartPage.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.nudStartPage.Name = "nudStartPage";
-            this.nudStartPage.Size = new System.Drawing.Size(120, 20);
+            this.nudStartPage.Size = new System.Drawing.Size(262, 20);
             this.nudStartPage.TabIndex = 2;
             this.nudStartPage.Value = new decimal(new int[] {
             1,
@@ -84,7 +89,7 @@
             // lblStartSplit
             // 
             this.lblStartSplit.AutoSize = true;
-            this.lblStartSplit.Location = new System.Drawing.Point(12, 130);
+            this.lblStartSplit.Location = new System.Drawing.Point(12, 208);
             this.lblStartSplit.Name = "lblStartSplit";
             this.lblStartSplit.Size = new System.Drawing.Size(80, 13);
             this.lblStartSplit.TabIndex = 3;
@@ -93,7 +98,7 @@
             // lblEnd
             // 
             this.lblEnd.AutoSize = true;
-            this.lblEnd.Location = new System.Drawing.Point(141, 130);
+            this.lblEnd.Location = new System.Drawing.Point(12, 247);
             this.lblEnd.Name = "lblEnd";
             this.lblEnd.Size = new System.Drawing.Size(77, 13);
             this.lblEnd.TabIndex = 5;
@@ -101,14 +106,14 @@
             // 
             // nudEndPage
             // 
-            this.nudEndPage.Location = new System.Drawing.Point(144, 146);
+            this.nudEndPage.Location = new System.Drawing.Point(15, 263);
             this.nudEndPage.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.nudEndPage.Name = "nudEndPage";
-            this.nudEndPage.Size = new System.Drawing.Size(120, 20);
+            this.nudEndPage.Size = new System.Drawing.Size(262, 20);
             this.nudEndPage.TabIndex = 4;
             this.nudEndPage.Value = new decimal(new int[] {
             1,
@@ -119,7 +124,7 @@
             // btnSplit
             // 
             this.btnSplit.Enabled = false;
-            this.btnSplit.Location = new System.Drawing.Point(15, 184);
+            this.btnSplit.Location = new System.Drawing.Point(15, 289);
             this.btnSplit.Name = "btnSplit";
             this.btnSplit.Size = new System.Drawing.Size(75, 23);
             this.btnSplit.TabIndex = 6;
@@ -132,14 +137,14 @@
             this.lblFilePath.AutoSize = true;
             this.lblFilePath.Location = new System.Drawing.Point(12, 9);
             this.lblFilePath.Name = "lblFilePath";
-            this.lblFilePath.Size = new System.Drawing.Size(48, 13);
+            this.lblFilePath.Size = new System.Drawing.Size(70, 13);
             this.lblFilePath.TabIndex = 7;
-            this.lblFilePath.Text = "File URL";
+            this.lblFilePath.Text = "File Location:";
             // 
             // lblNewFileName
             // 
             this.lblNewFileName.AutoSize = true;
-            this.lblNewFileName.Location = new System.Drawing.Point(12, 87);
+            this.lblNewFileName.Location = new System.Drawing.Point(12, 168);
             this.lblNewFileName.Name = "lblNewFileName";
             this.lblNewFileName.Size = new System.Drawing.Size(101, 13);
             this.lblNewFileName.TabIndex = 8;
@@ -148,16 +153,45 @@
             // txtSplitFileName
             // 
             this.txtSplitFileName.Enabled = false;
-            this.txtSplitFileName.Location = new System.Drawing.Point(15, 104);
+            this.txtSplitFileName.Location = new System.Drawing.Point(15, 185);
             this.txtSplitFileName.Name = "txtSplitFileName";
             this.txtSplitFileName.Size = new System.Drawing.Size(262, 20);
             this.txtSplitFileName.TabIndex = 9;
+            // 
+            // txtNewFilePath
+            // 
+            this.txtNewFilePath.Location = new System.Drawing.Point(15, 115);
+            this.txtNewFilePath.Name = "txtNewFilePath";
+            this.txtNewFilePath.Size = new System.Drawing.Size(262, 20);
+            this.txtNewFilePath.TabIndex = 14;
+            // 
+            // btnBrowse
+            // 
+            this.btnBrowse.Location = new System.Drawing.Point(15, 141);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(75, 23);
+            this.btnBrowse.TabIndex = 15;
+            this.btnBrowse.Text = "Browse";
+            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
+            // lblNewFilePath
+            // 
+            this.lblNewFilePath.AutoSize = true;
+            this.lblNewFilePath.Location = new System.Drawing.Point(12, 99);
+            this.lblNewFilePath.Name = "lblNewFilePath";
+            this.lblNewFilePath.Size = new System.Drawing.Size(95, 13);
+            this.lblNewFilePath.TabIndex = 16;
+            this.lblNewFilePath.Text = "New File Location:";
             // 
             // PDFReaderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(290, 224);
+            this.ClientSize = new System.Drawing.Size(304, 341);
+            this.Controls.Add(this.lblNewFilePath);
+            this.Controls.Add(this.btnBrowse);
+            this.Controls.Add(this.txtNewFilePath);
             this.Controls.Add(this.txtSplitFileName);
             this.Controls.Add(this.lblNewFileName);
             this.Controls.Add(this.lblFilePath);
@@ -191,6 +225,11 @@
         private System.Windows.Forms.Label lblFilePath;
         private System.Windows.Forms.Label lblNewFileName;
         private System.Windows.Forms.TextBox txtSplitFileName;
+        private System.Windows.Forms.SaveFileDialog sfdSaveDialog;
+        private System.Windows.Forms.FolderBrowserDialog fbdBrowsingDialog;
+        private System.Windows.Forms.TextBox txtNewFilePath;
+        private System.Windows.Forms.Button btnBrowse;
+        private System.Windows.Forms.Label lblNewFilePath;
     }
 }
 
