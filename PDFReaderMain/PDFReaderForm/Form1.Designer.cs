@@ -39,7 +39,6 @@
             this.lblFilePath = new System.Windows.Forms.Label();
             this.lblNewFileName = new System.Windows.Forms.Label();
             this.txtSplitFileName = new System.Windows.Forms.TextBox();
-            this.sfdSaveDialog = new System.Windows.Forms.SaveFileDialog();
             this.fbdBrowsingDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.txtNewFilePath = new System.Windows.Forms.TextBox();
             this.btnBrowse = new System.Windows.Forms.Button();
@@ -225,7 +224,6 @@
         private System.Windows.Forms.Label lblFilePath;
         private System.Windows.Forms.Label lblNewFileName;
         private System.Windows.Forms.TextBox txtSplitFileName;
-        private System.Windows.Forms.SaveFileDialog sfdSaveDialog;
         private System.Windows.Forms.FolderBrowserDialog fbdBrowsingDialog;
         private System.Windows.Forms.TextBox txtNewFilePath;
         private System.Windows.Forms.Button btnBrowse;

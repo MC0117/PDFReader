@@ -16,7 +16,7 @@ namespace PDFReaderForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PDFReaderForm());
+            Application.Run(new StartUpForm());
         }
     }
 }
