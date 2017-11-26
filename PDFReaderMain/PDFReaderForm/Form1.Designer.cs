@@ -1,6 +1,6 @@
 ﻿namespace PDFReaderForm
 {
-    partial class Form1
+    partial class PDFReaderForm
     {
         /// <summary>
         /// Required designer variable.
@@ -37,6 +37,8 @@
             this.nudEndPage = new System.Windows.Forms.NumericUpDown();
             this.btnSplit = new System.Windows.Forms.Button();
             this.lblFilePath = new System.Windows.Forms.Label();
+            this.lblNewFileName = new System.Windows.Forms.Label();
+            this.txtSplitFileName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudStartPage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudEndPage)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +55,7 @@
             this.btnImport.TabIndex = 0;
             this.btnImport.Text = "Import File";
             this.btnImport.UseVisualStyleBackColor = true;
-            this.btnImport.Click += new System.EventHandler(this.button1_Click);
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
             // txtFilePath
             // 
@@ -64,7 +66,7 @@
             // 
             // nudStartPage
             // 
-            this.nudStartPage.Location = new System.Drawing.Point(15, 102);
+            this.nudStartPage.Location = new System.Drawing.Point(15, 146);
             this.nudStartPage.Minimum = new decimal(new int[] {
             1,
             0,
@@ -82,7 +84,7 @@
             // lblStartSplit
             // 
             this.lblStartSplit.AutoSize = true;
-            this.lblStartSplit.Location = new System.Drawing.Point(12, 86);
+            this.lblStartSplit.Location = new System.Drawing.Point(12, 130);
             this.lblStartSplit.Name = "lblStartSplit";
             this.lblStartSplit.Size = new System.Drawing.Size(80, 13);
             this.lblStartSplit.TabIndex = 3;
@@ -91,7 +93,7 @@
             // lblEnd
             // 
             this.lblEnd.AutoSize = true;
-            this.lblEnd.Location = new System.Drawing.Point(141, 86);
+            this.lblEnd.Location = new System.Drawing.Point(141, 130);
             this.lblEnd.Name = "lblEnd";
             this.lblEnd.Size = new System.Drawing.Size(77, 13);
             this.lblEnd.TabIndex = 5;
@@ -99,7 +101,7 @@
             // 
             // nudEndPage
             // 
-            this.nudEndPage.Location = new System.Drawing.Point(144, 102);
+            this.nudEndPage.Location = new System.Drawing.Point(144, 146);
             this.nudEndPage.Minimum = new decimal(new int[] {
             1,
             0,
@@ -117,7 +119,7 @@
             // btnSplit
             // 
             this.btnSplit.Enabled = false;
-            this.btnSplit.Location = new System.Drawing.Point(15, 128);
+            this.btnSplit.Location = new System.Drawing.Point(15, 184);
             this.btnSplit.Name = "btnSplit";
             this.btnSplit.Size = new System.Drawing.Size(75, 23);
             this.btnSplit.TabIndex = 6;
@@ -134,11 +136,30 @@
             this.lblFilePath.TabIndex = 7;
             this.lblFilePath.Text = "File URL";
             // 
-            // Form1
+            // lblNewFileName
+            // 
+            this.lblNewFileName.AutoSize = true;
+            this.lblNewFileName.Location = new System.Drawing.Point(12, 87);
+            this.lblNewFileName.Name = "lblNewFileName";
+            this.lblNewFileName.Size = new System.Drawing.Size(101, 13);
+            this.lblNewFileName.TabIndex = 8;
+            this.lblNewFileName.Text = "New PDF file name:";
+            // 
+            // txtSplitFileName
+            // 
+            this.txtSplitFileName.Enabled = false;
+            this.txtSplitFileName.Location = new System.Drawing.Point(15, 104);
+            this.txtSplitFileName.Name = "txtSplitFileName";
+            this.txtSplitFileName.Size = new System.Drawing.Size(262, 20);
+            this.txtSplitFileName.TabIndex = 9;
+            // 
+            // PDFReaderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(319, 235);
+            this.ClientSize = new System.Drawing.Size(290, 224);
+            this.Controls.Add(this.txtSplitFileName);
+            this.Controls.Add(this.lblNewFileName);
             this.Controls.Add(this.lblFilePath);
             this.Controls.Add(this.btnSplit);
             this.Controls.Add(this.lblEnd);
@@ -147,8 +168,8 @@
             this.Controls.Add(this.nudStartPage);
             this.Controls.Add(this.txtFilePath);
             this.Controls.Add(this.btnImport);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "PDFReaderForm";
+            this.Text = "PDF Reader";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudStartPage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudEndPage)).EndInit();
@@ -168,6 +189,8 @@
         private System.Windows.Forms.NumericUpDown nudEndPage;
         private System.Windows.Forms.Button btnSplit;
         private System.Windows.Forms.Label lblFilePath;
+        private System.Windows.Forms.Label lblNewFileName;
+        private System.Windows.Forms.TextBox txtSplitFileName;
     }
 }
 
